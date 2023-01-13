@@ -15,13 +15,13 @@ class CreateNote : AppCompatActivity() {
 
     private lateinit var binding : CreateNoteBinding
 
-    private lateinit var note: Note
+    private lateinit var note:Note
     private lateinit var old_note:Note
     var isUpdate = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//
+
         binding = CreateNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

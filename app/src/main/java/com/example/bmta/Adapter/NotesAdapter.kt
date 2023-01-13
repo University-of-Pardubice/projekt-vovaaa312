@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bmta.Models.Note
 import com.example.bmta.R
 
-class NotesAdapter(private val context : Context, val listener:NotesClickListener): RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
+class NotesAdapter(private val context : Context, val listener:NotesClickListener):RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
     private val NotesList=ArrayList<Note>()
     private val FullList=ArrayList<Note>()

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
 import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.PopupMenu
@@ -78,8 +79,13 @@ class MainActivity : AppCompatActivity(), NotesAdapter.NotesClickListener, Popup
 
             }
         binding.fbCreateNote.setOnClickListener {
-            val intent = Intent(this, CreateNote::class.java)
-            getContent.launch(intent)
+          try {
+              val intent = Intent(this, CreateNote::class.java)
+              getContent.launch(intent)
+          }catch (e:Exception){
+              e.printStackTrace()
+          }
+
         }
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
