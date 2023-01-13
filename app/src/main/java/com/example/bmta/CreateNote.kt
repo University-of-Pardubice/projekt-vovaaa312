@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bmta.Models.Note
+import com.example.bmta.databinding.CreateNoteBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -12,7 +13,7 @@ import java.util.*
 
 class CreateNote : AppCompatActivity() {
 
-    private lateinit var binding : ActivityCreateNoteBinding
+    private lateinit var binding : CreateNoteBinding
 
     private lateinit var note: Note
     private lateinit var old_note:Note
@@ -21,7 +22,7 @@ class CreateNote : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCreateNoteBinding.inflate(layoutInflater)
+        binding = CreateNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         try {
