@@ -1,6 +1,7 @@
 package com.example.bmta
 
 import android.app.Activity
+import android.app.UiModeManager.MODE_NIGHT_YES
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +10,9 @@ import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.SearchView
+import android.widget.Switch
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -101,6 +104,15 @@ class MainActivity : AppCompatActivity(), NotesAdapter.NotesClickListener, Popup
             }
 
         })
+
+        val switch: Switch = binding.themeSwitch
+        switch.setOnCheckedChangeListener{buttonView,isChecked->
+            if(isChecked){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }else{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
     }
 
     override fun onItemClicked(note: Note) {

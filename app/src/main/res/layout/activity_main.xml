@@ -7,6 +7,14 @@
     tools:context=".MainActivity">
 
 
+    <Switch
+        android:id="@+id/themeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchView" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fbCreateNote"
         android:layout_width="wrap_content"
@@ -23,13 +31,12 @@
 
     <android.widget.SearchView
         android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_width="304dp"
+        android:layout_height="51dp"
         android:layout_margin="16dp"
         android:elevation="8dp"
         android:iconifiedByDefault="false"
         android:queryHint="Search Notes"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
