@@ -13,4 +13,6 @@
 
     <color name="noteBackground">#CCCCCC</color>
     <color name="textColor">#000000</color>
+
+    <color name="createColor"></color>
 </resources>
