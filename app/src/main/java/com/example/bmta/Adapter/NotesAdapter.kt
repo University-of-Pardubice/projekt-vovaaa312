@@ -68,7 +68,7 @@ class NotesAdapter(private val context : Context, val listener:NotesClickListene
 
 
     fun setColor():Int{
-        return R.color.grey
+        return R.color.noteBackground
     }
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
